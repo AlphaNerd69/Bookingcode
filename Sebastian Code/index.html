@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Goethe-Jazz</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="style.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+    var mail = document.getElementById(email);
+        function sendEmail() {
+          Email.send({
+            Host: "w0178e8d.kasserver.com",
+            Username: "tickets@goethe-jazz.de",
+            Password: "!321Tickets##",
+            To(mail),
+            From: "tickets@goethe-jazz.de",
+            Subject: "Test email",
+            Body: "Test test test",
+          })
+            .then(function (message) {
+          alert("mail sent successfully")
+             });
+             function(error, response){
+        if (error) console.log( error );
+        else console.log(response);
+        }
+      </script>
+</head> 
+<body> 
+    <div class="header">
+        <img src="goethe.jpg" alt="[logo]" />
+        <h1>Goethe-Jazz</h1>
+      </div>
+    <div>
+    <br style="clear: both;" />
+    </div>
+    <div id="info1">
+        <p>Herzlich willkommen bei der Jazz-AG am Goethe-Gymnasium Wilmersdorf!</p>
+        <p>Hier können Sie Tickets für die anstehenden Jazz-Nights vorbestellen.</p>
+    </div>
+        <hr>
+</div>
+<h3>Bitte geben Sie ihre persönlichen Daten an</h3>
+
+
+    <form action="https://sheetdb.io/api/v1/w23g9a7ojvgxa" method="POST" id="sheetdb-form">
+        <div id="names">
+            <div class="name">
+                Nachname: <input name="data[name]" placeholder="Mustermann">
+            </div>
+            <div class="name">
+                Vorname: <input name="data[lastname]" placeholder="Max">
+            </div>
+            <div class="mail">
+                E-Mail: <input name="data[email]" id="email" placeholder="maxmustermann@gmail.com">
+            </div>
+            <img id="flyer_46"src="flyer_46.jazznight.jpg" alt="[flyer_46]">
+        </div>
+        <hr>
+        <div style="overflow-x:auto;">
+            <h3>Wann möchten Sie die Jazz-Night besuchen?</h3>
+            <table id="dates">
+                <tr>
+                    <th>Datum</th>
+                    <th class="Tag">Tag</th>
+                    <th>Erwachsene</th>
+                    <th>Kinder</th>
+                </tr>
+                <tr>
+                    <td>11.11.2021</td>
+                    <td class="Tag">Donnerstag</td>
+                    <td><input type="number" name="data[erw1]" placeholder="0"></td>
+                    <td><input type="number" name="data[erm1]" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <td>12.11.2021</td>
+                    <td class="Tag">Freitag</td>
+                    <td><input type="number" name="data[erw2]" placeholder="0"></td>
+                    <td><input type="number" name="data[erm2]" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <td>13.11.2021</td>
+                    <td class="Tag">Samstag</td>
+                    <td><input type="number" name="data[erw3]" placeholder="0"></td>
+                    <td><input type="number" name="data[erm3]" placeholder="0"></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+      
+        <div class=Buttons>
+            <button id="submitbutton" onclick="sendEmail()">Bestätigen</button>
+        </div>
+    
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+        e.preventDefault();
+        fetch(form.action, {
+            method : "POST",
+            body: new FormData(document.getElementById("sheetdb-form")),
+        })
+        .then(
+            response => response.json())
+        // .then((html) => {
+        //     // email code
+        // alert('Vielen Dank für Ihre Vorbestellung! Sie erhalten in Kürze eine Bestätigungs-Email')
+            
+    });
+     });
+    
+
+
+
+
+  </script>
+
+  <p id="myText" style="display: none;">Ich bin der Text</p>
+        <h3>Wichtige Informationen zur Jazz-Night:</h3>
+      </div>
+      <div id="info2">
+            <p>Als Ermäßigt gelten alle Personen bis zur Vollendung des 18. Lebensjahres.</p>
+            <p>Die Karten werden an dem gewünschten Tag in
+                gewünschter Menge an der Abendkasse für Sie bereit liegen.Bitte holen Sie diese bis
+                30 Minuten vor Konzertbeginn ab, da sie andernfalls wieder der Abendkasse zur
+                Verfügung gestellt werden.</p>
+            <p> Sollte absehbar sein, dass Sie reservierte Karten nicht benötigen, bitten wir wegen der
+                begrenzten Kapazität um schnelle Rückmeldung.</p>
+            <p>Alle drei Jazznight-Abende werden als 2G Veranstaltung durchgeführt.</p>
+            <p>- Bitte für die Einlasskontrolle einen Nachweis (geimpft oder genesen)
+                mitbringen!</p>
+            <p>- Im Schulgebäude gilt grundsätzlich die Pflicht zum Tragen eines Mund-
+                /Nasenschutzes. Am Sitzplatz kann dieser während des Konzertes abgenommen
+                werden.</p>
+            <p>- Da es für unter 12-jährige Kinder bisher keine Impfempfehlung gibt, gilt für
+                diese jüngeren Konzertbesucher*innen die 3G-Regel.</p>
+            <h4> Wir freuen uns auf Sie!</h4>
+      </div>
+      <div>
+          <footer id="footer">
+            <p>Goethe-Jazz</p>
+            <a href="https://www.goethe-jazz.de/datenschutzerklaerung/">Datenschutzerklärung</a>
+            <p><a href="mailto:tickets@goethe-jazz.de">Bei Fragen wenden Sie sich bitte an uns!</a></p>
+          </footer>
+      </div>
+
+
+  </form>
+</body>
+</html>

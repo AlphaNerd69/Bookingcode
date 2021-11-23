@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Send Mail</title>
+  <script src=
+    "https://smtpjs.com/v3/smtp.js">
+  </script>
+  
+  <script type="text/javascript">
+    function sendEmail() {
+      Email.send({
+        Host: "w0178e8d.kasserver.com",
+        Username: "tickets@goethe-jazz.de",
+        Password: "!321Tickets##",
+        To: 'felixdu240407@gmail.com',
+        From: "tickets@goethe-jazz.de",
+        Subject: "Test email",
+        Body: "Test test test",
+      })
+        .then(function (message) {
+          alert("mail sent successfully")
+        });
+    }
+  </script>
+</head>
+  
+<body>
+  <form method="post">
+    <input type="button" value="Send Email" 
+        onclick="sendEmail()" />
+  </form>
+</body>
+  
+</html>

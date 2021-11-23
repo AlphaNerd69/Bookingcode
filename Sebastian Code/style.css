@@ -1,0 +1,99 @@
+
+body 
+{font-family: 'Lato', sans-serif;}
+hr 
+{border: 1px dotted #ccc;}
+
+.header img {
+                float: left;
+                width: 70px;
+                height: 70px;
+                padding-left: 0.3em;
+                background: #ffffff;
+                }
+.header h1 {
+                position: relative;
+                font-size: 47px;
+                top: 13px;
+                left: 10px;
+                } 
+        @media screen and (max-width: 375px) {
+            .header h1 {
+                position: relative;
+                font-size: 38px;
+                top: 13px;
+                left: 10px;
+                } 
+        }             
+        input, select { border-radius: 1px;
+                        border: 2px solid grey;
+                        box-sizing: border-box;
+                        font-size: 1em;
+                        font-family: "sans-serif";
+                        width: 100%;
+                        padding: 7px;}
+        img#flyer_46 {
+            max-width: 350px; 
+                    height: auto; 
+                    float: right;
+                    margin-right: 1em;
+                    border: olive;
+                    border-radius: 25px;
+                    background: #ffffff;}
+        @media screen and (max-width: 1050px) {
+            img#flyer_46 {
+                display: none; }
+        }
+        #names {
+            font-size: 1em;
+            padding-top: 1em;
+            padding-bottom: 0.3em;}
+        .name {
+            padding-bottom: 1.3em;
+        }
+        .mail {
+            padding-bottom: 0.6em;
+        }
+        table#dates th { text-align: left;
+                    font-size: 1.2em; 
+                    padding: 10px;
+                    border-bottom: 1px solid silver;}
+        @media screen and (max-width: 400px) {
+            .Tag {
+                display: none;}
+        }
+        table#dates td, table#dates th {  padding: 1em 2em 0.3em 0; 
+                                            font-size: 1.1em;
+                                            margin: 2;}
+        @media screen and (max-width: 375px) {
+            table#dates td, table#dates th {  padding: 1em 1.1em 0.3em 0; 
+                                            font-size: 1em;
+                                            margin: 2;}
+        }                                   
+        input[type=button] { width: 3.5em; 
+                            height: 1.85em;}
+        #submitbutton { padding-left: 2em;
+                        margin-top: 1em;
+                        transition-duration: 0.25s;
+                        background-color: #ffe605;
+                        border: 2px solid #ffe605;
+                        border-radius: 5px;
+                        color: black;
+                        padding: 15px 32px;
+                        margin-bottom: 2em;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        font-size: 16px;}
+        #submitbutton:hover {   background-color: #ffda05;
+                                border: 2px solid #ffda05;
+                                color: black;
+                                padding: 15px 32px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-size: 16px;}
+        #footer {   background-color: #F1F1F1;
+                    text-align: center;
+                    padding: 10px;
+                    border-radius: 6px;} 
